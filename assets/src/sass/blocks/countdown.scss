@@ -1,0 +1,68 @@
+.il-countdown{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:75%;
+
+    &-wrapper{
+        background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%),url( ../../../assets/icons/when.svg);
+        background-position: left top;
+        background-repeat:no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding:45px 30px;
+    }
+    &-item{
+        color:#fff;
+        text-align: center;
+        &:not(:last-child){
+            margin-right: 60px;
+        }
+        h3{
+            font-size: 90px;
+            line-height: 96px;
+        }
+        p{
+            font-size: 33px;
+            line-height: 37px;
+            margin: 0;
+        }
+
+    }
+    &-links{
+        width: 25%;
+        ul{
+            list-style: none;
+            color:#fff;
+            font-weight: 700;
+            padding-left: 80px;
+            margin-left: 0;
+            margin-bottom: 0;
+            border-left: 1px solid #fff;
+            li{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 12px 0;
+                svg{
+                    margin-right: 9px;
+                }
+                a{
+                    color:#fff;
+                    text-decoration: none;
+                }
+                span{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

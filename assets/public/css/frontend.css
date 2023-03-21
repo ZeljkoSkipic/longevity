@@ -2857,6 +2857,73 @@ textarea {
   flex-wrap: wrap;
 }
 
+.il-countdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+.il-countdown-wrapper {
+  background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%), url(../../../assets/icons/when.svg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 30px;
+}
+.il-countdown-item {
+  color: #fff;
+  text-align: center;
+}
+.il-countdown-item:not(:last-child) {
+  margin-right: 60px;
+}
+.il-countdown-item h3 {
+  font-size: 90px;
+  line-height: 96px;
+}
+.il-countdown-item p {
+  font-size: 33px;
+  line-height: 37px;
+  margin: 0;
+}
+.il-countdown-links {
+  width: 25%;
+}
+.il-countdown-links ul {
+  list-style: none;
+  color: #fff;
+  font-weight: 700;
+  padding-left: 80px;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-left: 1px solid #fff;
+}
+.il-countdown-links ul li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 0;
+}
+.il-countdown-links ul li svg {
+  margin-right: 9px;
+}
+.il-countdown-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.il-countdown-links ul li span {
+  font-size: 2rem;
+}
+
 .fp-enabled #fp-nav {
   z-index: 8;
 }
