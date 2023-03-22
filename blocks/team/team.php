@@ -2,6 +2,7 @@
 
 $margin = get_field_object('margin');
 $padding = get_field_object('padding');
+$layout = get_field_object('layout');
 
 
 $anchor = '';
@@ -30,6 +31,9 @@ if ( ! empty( $padding) ) {
     $class .=  ' ' . $padding['value'];
 }
 
+if ( ! empty( $layout ) ) {
+    $class .=  ' ' . $layout['value'];
+}
 $member_class = 'member';
 if ( ! empty( $block['className'] ) ) {
     $member_class .= ' ' . $block['className'];
