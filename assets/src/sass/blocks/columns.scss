@@ -3,4 +3,134 @@
     display: flex;
     flex-wrap: wrap;
   }
+  &.custom-hp-columns {
+    color: #000;
+    @include limbo-max {
+      overflow: hidden;
+    }
+    .il_block_bg {
+      @include desk-min {
+        width: var(--site-width);
+        max-width: var(--site-max-width);
+        margin: auto;
+      }
+      img {
+        @include desk-min {
+          width: auto;
+          right: -5%;
+          &.mob_bg {
+            display: none;
+          }
+          &.desk_bg {
+            display: block;
+          }
+        }
+        @include limbo-max {
+          height: 35vh;
+          &.mob_bg {
+            display: block;
+          }
+          &.desk_bg {
+            display: none;
+          }
+        }
+      }
+    }
+    .container {
+      @include limbo-max {
+        padding-top: 31vh;
+      }
+      .il_block_intro, .il_columns_inner {
+        @include desk-min {
+          width: 55%;
+        }
+        @include limbo-max {
+          width: 100%;
+          padding-top: 4rem;
+        }
+      }
+    }
+    h3 {
+      font-size: 5rem;
+      font-weight: 400;
+      color: var(--color-1);
+      margin-bottom: 5.7rem;
+      position: relative;
+      span {
+        color: var(--color-2);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.865rem;
+        background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+        margin-left: 4rem;
+        bottom: 0;
+        z-index: -2;
+      }
+    }
+    .intro_text {
+      font-size: 2rem;
+    }
+    .il_col.column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .intro_title {
+        margin-top: 1.2rem;
+        font-family: 'Font Secondary';
+        font-size: 1.8rem;
+        font-weight: 400;
+        max-width: 184px;
+        @include limbo-max {
+          font-size: 14px;
+        }
+      }
+      @include desk-min {
+        width: 20%;
+        margin-top: 4rem;
+        &:nth-child(1), &:nth-child(6) {
+          width: 14%;
+        }
+      }
+      @include limbo-max {
+        margin-right: 1%;
+      }
+      @include mob-only {
+        width: 46%;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+    }
+  }
+  &.custom-hp-columns-bottom {
+    padding-top: 14rem;
+    .container {
+      max-width: 1193px;
+      padding-bottom: 9.5rem;
+    }
+    .il_col.column {
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+      h3 {
+        color: var(--color-1);
+        font-weight: 400;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        span {
+          color: var(--color-2);
+        }
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.74rem;
+      background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+    }
+  }
 }

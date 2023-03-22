@@ -6,10 +6,10 @@
         display: none;
     }
     .header-main {
-        position: sticky;
+        position: fixed;
         top: 0;
-        background-color: #fff;
         height: 13rem;
+        width: 100%;
     }
     .header-main-inner {
         display: flex;
@@ -38,8 +38,10 @@
         width: 100%;
         height: 100vh;
         background: #fff;
+        top: 0;
         left: 0;
-        padding: 25px;
+        padding: 80px 25px 25px 25px;
+        z-index: -1;
         li {
             a {
                 padding: 1.5rem;
