@@ -2,6 +2,8 @@
 $countdown_start_date = strval(get_field('countdown_start_date'));
 $countdown_end_date = strval(get_field('countdown_end_date'));
 
+var_dump($countdown_end_date);
+
 $timestamp_start = strtotime($countdown_start_date);
 $timestamp_end = strtotime($countdown_end_date);
 
@@ -12,13 +14,19 @@ $start_month = date('F', $timestamp_start);
 $end_month = date('F', $timestamp_end);
 $year = date('Y', $timestamp_start);
 $display_date = '';
-if($start_month === $end_month){
-    $display_date =  $start_month . ' ' .$start_day.'-'.$end_day.', '.$year;
-    
+
+if(!empty($countdown_end_date)){
+    if($start_month === $end_month){
+        $display_date =  $start_month . ' ' .$start_day.'-'.$end_day.', '.$year;
+        
+    }else{
+        $display_date =  date('M', $timestamp_start) . ' ' .$start_day.' - '.date('M', $timestamp_end).' '.$end_day.', '.$year;
+        $event_date = $timestamp_start;
+    }
 }else{
-    $display_date =  date('M', $timestamp_start) . ' ' .$start_day.' - '.date('M', $timestamp_end).' '.$end_day.', '.$year;
-    $event_date = $timestamp_start;
+    $display_date =  $start_month . ' ' .$start_day.', '.$year;
 }
+
 
 
 $countdown_time = strtotime($countdown_start_date);
