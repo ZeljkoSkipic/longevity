@@ -18,7 +18,7 @@ let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 let days_string = days === 1 ? "Day" : "Days" ;
-let hours_string = hours === 1 || hours ? "Hour" : "Hours";
+let hours_string = hours === 1 ? "Hour" : "Hours";
 let minutes_string = minutes === 1 ? "Minute" : "Minutes";
 let seconds_string = seconds === 1 ? "Second" : "Seconds";
 
@@ -34,3 +34,27 @@ if (distance < 0) {
     counter.innerHTML = "EXPIRED";
 }
 }, 1000);
+
+(function($) {
+    $(document).ready(function() {
+        var container = $('.add-to-calendar-links');
+
+        $('.il-countdown-add-to-calendar').on('click',function(){
+            container.show()
+        });
+
+        window.addEventListener('mouseup',function(e){
+            if (!container.is(e.target) && container.has(e.target).length === 0){
+                container.hide ();
+            }
+        });  
+
+        
+        // });
+    
+        
+    });
+
+
+   
+})(jQuery);

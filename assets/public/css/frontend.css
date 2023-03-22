@@ -2863,13 +2863,13 @@ textarea {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 70%;
 }
 .il-countdown-wrapper {
-  background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%), url(../../../assets/icons/when.svg);
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(../../../assets/icons/when.svg), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+  background-position: left top, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2894,7 +2894,7 @@ textarea {
   margin: 0;
 }
 .il-countdown-links {
-  width: 25%;
+  width: 30%;
 }
 .il-countdown-links ul {
   list-style: none;
@@ -2912,6 +2912,7 @@ textarea {
   justify-content: flex-start;
   align-items: center;
   padding: 12px 0;
+  cursor: pointer;
 }
 .il-countdown-links ul li svg {
   margin-right: 9px;
@@ -2922,6 +2923,27 @@ textarea {
 }
 .il-countdown-links ul li span {
   font-size: 2rem;
+}
+.il-countdown-links ul li .add-to-calendar-links {
+  display: none;
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper {
+  position: relative;
+  width: calc(100% - 30px);
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 6px 0px 0px 0px;
+  background: #fff;
+  z-index: 99;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #000;
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links a {
+  color: #000;
+  display: block;
 }
 
 .fp-enabled #fp-nav {
