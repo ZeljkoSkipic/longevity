@@ -239,17 +239,17 @@ div.margin-xl {
   }
 }
 @media (max-width: 1199.5px) {
-  .il_columns.custom-hp-columns .container {
+  .il_columns.custom-hp-columns .container, .il_columns.custom-hp-columns .il-countdown-wrapper {
     padding-top: 31vh;
   }
 }
 @media (min-width: 1199.6px) {
-  .il_columns.custom-hp-columns .container .il_block_intro, .il_columns.custom-hp-columns .container .il_columns_inner {
+  .il_columns.custom-hp-columns .container .il_block_intro, .il_columns.custom-hp-columns .il-countdown-wrapper .il_block_intro, .il_columns.custom-hp-columns .container .il_columns_inner, .il_columns.custom-hp-columns .il-countdown-wrapper .il_columns_inner {
     width: 55%;
   }
 }
 @media (max-width: 1199.5px) {
-  .il_columns.custom-hp-columns .container .il_block_intro, .il_columns.custom-hp-columns .container .il_columns_inner {
+  .il_columns.custom-hp-columns .container .il_block_intro, .il_columns.custom-hp-columns .il-countdown-wrapper .il_block_intro, .il_columns.custom-hp-columns .container .il_columns_inner, .il_columns.custom-hp-columns .il-countdown-wrapper .il_columns_inner {
     width: 100%;
     padding-top: 4rem;
   }
@@ -319,7 +319,7 @@ div.margin-xl {
 .il_columns.custom-hp-columns-bottom {
   padding-top: 14rem;
 }
-.il_columns.custom-hp-columns-bottom .container {
+.il_columns.custom-hp-columns-bottom .container, .il_columns.custom-hp-columns-bottom .il-countdown-wrapper {
   max-width: 1193px;
   padding-bottom: 9.5rem;
 }
@@ -351,7 +351,12 @@ div.margin-xl {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 65%;
+}
+@media (max-width: 1199.5px) {
+  .il-countdown {
+    width: 100%;
+  }
 }
 .il-countdown-wrapper {
   background: url(../../../assets/icons/when.svg), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
@@ -363,7 +368,32 @@ div.margin-xl {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 30px;
+  padding: 45px 30px 45px 125px;
+}
+@media (max-width: 1360.5px) {
+  .il-countdown-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 797.6px) and (max-width: 1199.5px) {
+  .il-countdown-wrapper {
+    padding: 45px 30px 45px 147px;
+  }
+}
+@media (max-width: 1199.5px) {
+  .il-countdown-wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 797.5px) {
+  .il-countdown-wrapper {
+    background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 30px;
+  }
 }
 .il-countdown-item {
   color: #fff;
@@ -372,26 +402,82 @@ div.margin-xl {
 .il-countdown-item:not(:last-child) {
   margin-right: 60px;
 }
+@media (max-width: 797.5px) {
+  .il-countdown-item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
 .il-countdown-item h3 {
   font-size: 90px;
   line-height: 96px;
+}
+@media (max-width: 1199.5px) {
+  .il-countdown-item h3 {
+    font-size: 70px;
+    line-height: 76px;
+  }
+}
+@media (max-width: 797.5px) {
+  .il-countdown-item h3 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 479.5px) {
+  .il-countdown-item h3 {
+    font-size: 38px;
+    line-height: 42px;
+  }
 }
 .il-countdown-item p {
   font-size: 33px;
   line-height: 37px;
   margin: 0;
 }
+@media (max-width: 1199.5px) {
+  .il-countdown-item p {
+    font-size: 23px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 479.5px) {
+  .il-countdown-item p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
 .il-countdown-links {
-  width: 30%;
+  width: 35%;
+}
+@media (max-width: 1199.5px) {
+  .il-countdown-links {
+    width: 100%;
+  }
 }
 .il-countdown-links ul {
   list-style: none;
   color: #fff;
   font-weight: 700;
-  padding-left: 80px;
+  padding-left: 20%;
   margin-left: 0;
   margin-bottom: 0;
   border-left: 1px solid #fff;
+}
+@media (max-width: 1360.5px) {
+  .il-countdown-links ul {
+    padding-left: 16%;
+  }
+}
+@media (max-width: 1199.5px) {
+  .il-countdown-links ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    border-left: none;
+    padding-top: 30px;
+  }
 }
 .il-countdown-links ul li {
   display: flex;
@@ -400,7 +486,20 @@ div.margin-xl {
   justify-content: flex-start;
   align-items: center;
   padding: 12px 0;
+  font-size: 22px;
+  line-height: 27px;
   cursor: pointer;
+}
+@media (max-width: 1360.5px) {
+  .il-countdown-links ul li {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1199.5px) {
+  .il-countdown-links ul li:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 .il-countdown-links ul li svg {
   margin-right: 9px;
@@ -408,9 +507,14 @@ div.margin-xl {
 .il-countdown-links ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 22px;
+  line-height: 27px;
 }
-.il-countdown-links ul li span {
-  font-size: 2rem;
+@media (max-width: 1360.5px) {
+  .il-countdown-links ul li a {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .il-countdown-links ul li .add-to-calendar-links {
   display: none;
@@ -421,17 +525,41 @@ div.margin-xl {
 }
 .il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links {
   position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 6px 0px 0px 0px;
+  top: -25px;
+  width: 210px;
+  padding: 20px 16px;
   background: #fff;
   z-index: 99;
-  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
-  border: 1px solid #000;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links a {
   color: #000;
-  display: block;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links a svg {
+  margin-right: 16px;
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links a span {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+.il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper span {
+  font-size: 22px;
+  line-height: 27px;
+}
+@media (max-width: 1360.5px) {
+  .il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper span {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .fp-enabled #fp-nav {
@@ -656,7 +784,7 @@ div.margin-xl {
   position: relative;
   z-index: 9;
 }
-.si_triggers > .container {
+.si_triggers > .container, .si_triggers > .il-countdown-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
@@ -664,14 +792,14 @@ div.margin-xl {
   opacity: 0;
   transition: var(--theme-transition);
 }
-.si_triggers .container {
+.si_triggers .container, .si_triggers .il-countdown-wrapper {
   display: flex;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 @media (min-width: 1199.6px) and (max-width: 1360.5px) {
-  .si_triggers .container {
+  .si_triggers .container, .si_triggers .il-countdown-wrapper {
     padding-bottom: 2rem;
   }
 }
@@ -1141,7 +1269,7 @@ div.margin-xl {
 .il_inner_hero-2 .il_inner_hero_inner_top svg {
   z-index: 1;
 }
-.il_inner_hero-2 .il_inner_hero_inner_top .container {
+.il_inner_hero-2 .il_inner_hero_inner_top .container, .il_inner_hero-2 .il_inner_hero_inner_top .il-countdown-wrapper {
   padding: 8rem 0 27rem 0;
   z-index: 2;
   position: relative;
@@ -2123,7 +2251,7 @@ main {
   font-size: var(--title-size-6);
 }
 
-.container {
+.container, .il-countdown-wrapper {
   width: var(--site-width);
   max-width: var(--site-max-width);
   margin: auto;

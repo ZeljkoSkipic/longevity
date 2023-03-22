@@ -4,9 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width:70%;
+    width:65%;
+    @include limbo-max{
+        width:100%;
+    }
 
     &-wrapper{
+        @extend .container;
         background: url( ../../../assets/icons/when.svg), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
         background-position: left top, center center;
         background-repeat:no-repeat, no-repeat;
@@ -16,35 +20,93 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding:45px 30px;
+        padding:45px 30px 45px 125px;
+        @include sm-desk-max{
+            max-width: 100%;
+            width: 100%;
+        }
+        @include limbo-only{
+            padding:45px 30px 45px 147px;
+        } 
+        @include limbo-max{
+            flex-direction: column;
+   
+        }
+        @include tab-max{
+            background:  linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+            background-position: center center;
+            background-repeat:no-repeat;
+            background-size: cover;
+            padding:45px 30px;
+        }
     }
     &-item{
         color:#fff;
         text-align: center;
         &:not(:last-child){
             margin-right: 60px;
+            @include tab-max{
+                margin-right: 25px;
+            }
         }
         h3{
             font-size: 90px;
             line-height: 96px;
+            @include limbo-max {
+                font-size: 70px;
+                line-height: 76px;
+            }
+            @include tab-max{
+                font-size: 56px;
+                line-height: 60px;
+            }
+            @include mob-only{
+                font-size: 38px;
+                line-height: 42px;
+            }
         }
         p{
             font-size: 33px;
             line-height: 37px;
             margin: 0;
+            @include limbo-max {
+                font-size: 23px;
+                line-height: 27px;
+            }
+   
+            @include mob-only{
+                font-size: 18px;
+                line-height: 20px;
+            }
         }
 
     }
     &-links{
-        width: 30%;
+        width: 35%;
+        @include limbo-max{
+            width:100%;
+        }
         ul{
             list-style: none;
             color:#fff;
             font-weight: 700;
-            padding-left: 80px;
+            padding-left: 20%;
             margin-left: 0;
             margin-bottom: 0;
             border-left: 1px solid #fff;
+            @include sm-desk-max{
+                padding-left: 16%;
+            }
+            @include limbo-max{
+               display: flex;
+               flex-direction: row;
+               flex-wrap: wrap;
+               justify-content: center;
+               padding-left: 0;
+               border-left: none;
+               padding-top: 30px;
+            }
+           
             li{
                 display: flex;
                 flex-direction: row;
@@ -52,6 +114,18 @@
                 justify-content: flex-start;
                 align-items: center;
                 padding: 12px 0;
+                font-size: 22px;
+                line-height: 27px;
+                @include sm-desk-max{
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                &:not(:last-child){
+                    @include limbo-max{
+                        margin-right: 20px;
+                    }
+                }
+                
                 cursor: pointer;
                 svg{
                     margin-right: 9px;
@@ -59,9 +133,12 @@
                 a{
                     color:#fff;
                     text-decoration: none;
-                }
-                span{
-                    font-size: 2rem;
+                    font-size: 22px;
+                    line-height: 27px;
+                    @include sm-desk-max{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
                 }
                 .add-to-calendar-links{
                     display:none;
@@ -72,17 +149,40 @@
                         width: calc(100% - 30px);
                         .add-to-calendar-links{
                             position: absolute;
-                            top:0;
-                            width: 100%;
-                            padding: 6px 0px 0px 0px;
+                            top:-25px;
+                            width: 210px;
+                            padding: 20px 16px;
                             background: #fff;
                             z-index: 99;
-                            box-shadow: 1px 3px 6px rgba(0,0,0,0.15);
-                            border:1px solid #000;
+                            background: #FFFFFF;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
                             a{
                                 color:#000;
-                                display: block;
+                                margin-bottom: 4px;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: flex-start;
+                                align-items: center;
+                                svg{
+                                    margin-right: 16px;
+                                }
+                                span{
+                                    margin-top: 5px;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 27px;
+                                }
+                            }
+                            
+                        }
+                        span{
+                            font-size: 22px;
+                            line-height: 27px;
+                            @include sm-desk-max{
+                                font-size: 18px;
+                                line-height: 24px;
                             }
                         }
                     }
