@@ -1,5 +1,10 @@
-.il_tabs {
+.il_agenda {
+    .il_agenda_wrap {
+        border: 1px solid #dedede;
+        padding: 10px;
+    }
     .il_tabs_nav {
+        background-color: #F3F3F3;
         ul {
             margin: 0;
             padding: 0;
@@ -7,24 +12,21 @@
         }
         li {
             display: inline-block;
-            background: var(--color-1);
-            color: #fefefe;
             border-width: 1px 1px 0 1px;
-            border-style: solid;
-            border-color: #34495E;
-            margin-right: 5px;
+            width: 50%;
+            text-align: center;
             a {
                 display: block;
                 padding: 10px 15px;
-                font-weight: bold;
+                font-size: 3.6rem;
                 color: #fff;
                 text-decoration: none;
+                color: #dedede;
+                font-family: "Font Primary";
             }
             &.active {
-                background: #FFF;
-                color: #000;
                 a {
-                    color: inherit;
+                    color: var(--color-2);
                 }
             }
         }
@@ -33,14 +35,58 @@
         transition: var(--theme-transition);
     }
     .il_tabs_content {
-        border: 1px solid var(--color-1);
-        padding: 2rem;
+        padding: 3rem 0;
+        * {
+            font-size: 22px;
+            @include mob-only {
+                font-size: 16px;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        strong {
+            margin-top: 18px;
+            margin-bottom: 18px;
+            display: inline-block;
+            font-size: 26px;
+            color: var(--color-1);
+            @include mob-only {
+                font-size: 18px;
+            }
+
+        }
+    }
+    .il_agenda_content {
         background: #FFF;
         margin-top: -1px;
         overflow: hidden;
-
+        display: flex;
+        @include mob-only {
+            flex-direction: column;
+        }
         .il_tab:not(:first-child) {
             display: none;
+        }
+        > div {
+            padding: 2rem 4rem;
+        }
+        .il_ac_time {
+            width: 20rem;
+            font-size: 3rem;
+            color: var(--color-1);
+            font-weight: 700;
+            @include tab-min {
+                border-right: 1px solid #dedede;
+            }
+            @include mob-only {
+                font-size: 18px;
+                padding-bottom: 0;
+                border-bottom: 1px solid #dedede;
+            }
+        }
+        .il_ac_content {
+            color: var(--color-1);
         }
     }
     @include mob-only {
