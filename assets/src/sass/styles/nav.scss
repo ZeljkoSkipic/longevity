@@ -2,6 +2,10 @@
 .header-main {
   z-index: 9;
 }
+.sticky {
+  background: #fff;
+  transition: var(--theme-transition);
+}
 .sub-menu-trigger {
   svg {
     stroke: var(--color-1);
@@ -24,8 +28,9 @@
   }
   .stick-main .header-version-1 {
     .header-main {
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
     }
   }
   .header-version-1 {
@@ -65,7 +70,6 @@
       }
     }
     .header-main {
-      background-color: #fff;
       &-inner {
         display: flex;
         width: 90%;
@@ -124,9 +128,10 @@
             }
           }
           a {
-            text-transform: uppercase;
             margin-right: 2rem;
-            color: var(--color-text);
+            color: var(--color-1);
+            font-family: 'Font Secondary';
+            font-weight: 700;
             font-size: 16px;
           }
         }
@@ -146,10 +151,13 @@
         .nav-button {
           flex-shrink: 0;
           margin-left: 3rem;
-          color: #fff;
+          font-family: 'Font Secondary';
+          font-weight: 700;
           text-decoration: none;
           text-transform: uppercase;
-          background-color: var(--color-1);
+          background-color: var(--color-2);
+          border: 1px solid #fff;
+          border-radius: 2rem;
           z-index: 99999;
         }
       }

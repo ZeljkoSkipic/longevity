@@ -45,3 +45,15 @@ jQuery(document).ready(function ($) {
 
 
 });
+
+window.onscroll = function() {
+    scrollHeader()
+};
+
+function scrollHeader() {
+  if ( document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+    document.getElementById("masthead").className = "header-main sticky";
+  } else {
+    document.getElementById("masthead").className = "header-main";
+  }
+}
