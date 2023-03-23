@@ -17,7 +17,10 @@
       img {
         @include desk-min {
           width: auto;
+          top: 10%;
           right: -5%;
+          max-width: 700px;
+          height: 90%;
           &.mob_bg {
             display: none;
           }

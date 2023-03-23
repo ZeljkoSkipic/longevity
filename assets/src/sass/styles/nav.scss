@@ -5,6 +5,10 @@
 .sticky {
   background: #fff;
   transition: var(--theme-transition);
+  .container.header-main-inner {
+    padding: 1.5rem 0;
+    transition: var(--theme-transition);
+  }
 }
 .sub-menu-trigger {
   svg {
@@ -31,6 +35,7 @@
       position: fixed;
       top: 0;
       width: 100%;
+      transition: var(--theme-transition);
     }
   }
   .header-version-1 {
@@ -73,10 +78,11 @@
       &-inner {
         display: flex;
         width: 90%;
-        max-width: 1600px;
+        max-width: 1516px;
         margin: auto;
         align-items: center;
-        padding: 1.5rem 0;
+        padding: 3rem 0 1.5rem 0;
+        transition: var(--theme-transition);
         #primary-menu {
           justify-content: flex-end;
           flex-wrap: wrap;
