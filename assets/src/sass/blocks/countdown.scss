@@ -20,13 +20,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding:45px 30px 45px 125px;
-        @include sm-desk-max{
+        padding:5.625rem 3.75rem 5.625rem 15.625rem;
+        @include limbo-max{
             max-width: 100%;
             width: 100%;
         }
         @include limbo-only{
-            padding:45px 30px 45px 147px;
+            padding:7.5rem 5rem;
         } 
         @include limbo-max{
             flex-direction: column;
@@ -37,46 +37,46 @@
             background-position: center center;
             background-repeat:no-repeat;
             background-size: cover;
-            padding:45px 30px;
+            padding:7.5rem 5rem;
         }
     }
     &-item{
         color:#fff;
         text-align: center;
         &:not(:last-child){
-            margin-right: 60px;
+            margin-right: 7rem;
             @include tab-max{
-                margin-right: 25px;
+                margin-right: 2.5rem;
             }
         }
         h3{
-            font-size: 90px;
-            line-height: 96px;
+            font-size: 11.2rem;
+            line-height: 12rem;
             @include limbo-max {
-                font-size: 70px;
-                line-height: 76px;
+                font-size: 11.6rem;
+                line-height: 12.6rem;
             }
             @include tab-max{
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 9.33rem;
+                line-height: 10rem;
             }
             @include mob-only{
-                font-size: 38px;
-                line-height: 42px;
+                font-size: 7.6rem;
+                line-height: 8.4rem;
             }
         }
         p{
-            font-size: 33px;
-            line-height: 37px;
+            font-size: 4.125rem;
+            line-height: 4.625rem;
             margin: 0;
             @include limbo-max {
-                font-size: 23px;
-                line-height: 27px;
+                font-size: 3.83rem;
+                line-height: 4.5rem;
             }
    
             @include mob-only{
-                font-size: 18px;
-                line-height: 20px;
+                font-size: 3.6rem;
+                line-height: 4rem;
             }
         }
 
@@ -104,7 +104,7 @@
                justify-content: center;
                padding-left: 0;
                border-left: none;
-               padding-top: 30px;
+               padding-top: 5rem;
             }
            
             li{
@@ -113,31 +113,31 @@
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 align-items: center;
-                padding: 12px 0;
-                font-size: 22px;
-                line-height: 27px;
+                padding: 1.5rem 0;
+                font-size: 2.75rem;
+                line-height: 3.375rem;
                 @include sm-desk-max{
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 2.57rem;
+                    line-height: 3.43rem;
                 }
                 &:not(:last-child){
                     @include limbo-max{
-                        margin-right: 20px;
+                        margin-right: 3.33rem;
                     }
                 }
                 
                 cursor: pointer;
                 svg{
-                    margin-right: 9px;
+                    margin-right: 1.125rem;
                 }
                 a{
                     color:#fff;
                     text-decoration: none;
-                    font-size: 22px;
-                    line-height: 27px;
+                    font-size: 2.75rem;
+                    line-height: 3.375rem;
                     @include sm-desk-max{
-                        font-size: 18px;
-                        line-height: 24px;
+                        font-size: 2.57rem;
+                        line-height: 3.43rem;
                     }
                 }
                 .add-to-calendar-links{
@@ -146,12 +146,12 @@
                 &.il-countdown-add-to-calendar{
                     .add-to-calendar-wrapper{
                         position: relative;
-                        width: calc(100% - 30px);
+
                         .add-to-calendar-links{
                             position: absolute;
-                            top:-25px;
+                            top:-3.125rem;
                             width: 210px;
-                            padding: 20px 16px;
+                            padding: 2.5rem 2rem;
                             background: #fff;
                             z-index: 99;
                             background: #FFFFFF;
@@ -159,30 +159,30 @@
 
                             a{
                                 color:#000;
-                                margin-bottom: 4px;
+                                margin-bottom: 0.5rem;
                                 display: flex;
                                 flex-direction: row;
                                 flex-wrap: wrap;
                                 justify-content: flex-start;
                                 align-items: center;
                                 svg{
-                                    margin-right: 16px;
+                                    margin-right: 2rem;
                                 }
                                 span{
-                                    margin-top: 5px;
+                                    margin-top: 0.63rem;
                                     font-weight: 400;
-                                    font-size: 18px;
-                                    line-height: 27px;
+                                    font-size: 2.25rem;
+                                    line-height: 3.375rem;
                                 }
                             }
                             
                         }
                         span{
-                            font-size: 22px;
-                            line-height: 27px;
+                            font-size: 2.75rem;
+                            line-height: 3.375rem;
                             @include sm-desk-max{
-                                font-size: 18px;
-                                line-height: 24px;
+                                font-size: 2.25rem;
+                                line-height: 3rem;
                             }
                         }
                     }
