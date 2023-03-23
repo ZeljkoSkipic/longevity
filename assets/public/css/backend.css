@@ -359,7 +359,7 @@ div.margin-xl {
   }
 }
 .il-countdown-wrapper {
-  background: url(../../../assets/icons/when.svg), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+  background: url(../../../assets/icons/when.png), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
   background-position: left top, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: contain, cover;

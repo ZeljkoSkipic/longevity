@@ -2,8 +2,6 @@
 $countdown_start_date = strval(get_field('countdown_start_date'));
 $countdown_end_date = strval(get_field('countdown_end_date'));
 
-var_dump($countdown_end_date);
-
 $timestamp_start = strtotime($countdown_start_date);
 $timestamp_end = strtotime($countdown_end_date);
 
