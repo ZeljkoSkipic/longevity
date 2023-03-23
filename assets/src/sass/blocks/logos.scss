@@ -1,0 +1,104 @@
+.il_logos {
+    .il_block_bg {
+        @include limbo-min {
+            max-width: 1850px;
+            margin: auto;
+            img {
+                width: auto;
+                height: 90%;
+                bottom: 0;
+            }
+        }
+        @include tab-max {
+            .desk_bg {
+                display: none;
+            }
+            .mob_bg {
+                height: auto;
+                bottom: 0;
+            }
+        }
+    }
+    .container {
+        background: #fff;
+        padding-top: 7rem;
+        box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
+        .il_block_intro, .intro_title, .il_logos_inner {
+            padding: 0 7rem;
+        }
+        @include limbo-max {
+            .btn_column {
+                width: fit-content;
+            }
+        }
+        @include desk-min {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        h3 {
+            font-size: 4rem;
+            margin-top: 6rem;
+            margin-bottom: 0;
+        }
+        p {
+            color: #000;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0.74rem;
+            background: linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
+        }
+    }
+
+    .il_logos_inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        .column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            @include limbo-max {
+                width: calc(100% / 3);
+                &.btn_column {
+                    width: 100%;
+                    justify-content: center !important;
+                    padding-left: 0;
+                }
+            }
+            @include mob-only {
+                width: 50%;
+            }
+            &.btn_column {
+                display: flex;
+                justify-content: end;
+            }
+            height: 20rem;
+            @include tab-max {
+                height: 150px;
+            }
+        }
+
+        .il_logo {
+            width: fit-content;
+            height: fit-content;
+            display: block;
+            margin: 1rem 1rem 1rem 0;
+            padding: 0 3rem 0 0;
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.abstract_content {
+    .intro_text p:last-child {
+        margin-bottom: 10rem;
+    }
+}

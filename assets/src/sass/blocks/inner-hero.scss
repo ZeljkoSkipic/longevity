@@ -1,5 +1,5 @@
 .il_inner_hero-1 {
-    min-height: 40rem;
+    min-height: 35rem;
     position: relative;
     display: flex;
     .il_inner_hero_bg {
@@ -22,10 +22,16 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        padding: 5rem 0;
+        padding: 8rem 0;
+        margin-top: auto;
+        margin-bottom: 0;
         .il_inner_hero_title {
-            color: #fff;
+            color: var(--color-1);
             font-size: var(--title-size-1);
+            font-size: 5rem;
+            span {
+                color: var(--color-2);
+            }
         }
         .il_inner_hero_text {
             color: #fff;

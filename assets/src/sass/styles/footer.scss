@@ -1,12 +1,27 @@
 .footer_main {
-    background-color: var(--color-1);
+    background-color: #F4F5F5;
     * {
-        color: #fff;
+        color: #000;
+        font-size: 2rem;
+        font-family: 'Font Secondary';
+        @include limbo-max {
+            font-size: 16px;
+        }
     }
 }
 .footer_main_inner {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    &.cols-2 .column {
+        width: 100%;
+        margin: 0;
+    }
+    p {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .footer_bottom {
