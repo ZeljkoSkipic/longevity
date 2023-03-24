@@ -362,6 +362,9 @@ div.margin-xl {
   }
 }
 .il-countdown-wrapper {
+  margin-top: -5.5rem;
+  z-index: 3;
+  position: relative;
   background: url(../../../assets/icons/when.png), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
   background-position: left top, center center;
   background-repeat: no-repeat, no-repeat;
@@ -1553,35 +1556,35 @@ div.margin-xl {
     bottom: 0;
   }
 }
-.il_logos .container {
+.il_logos .container, .il_logos .il-countdown-wrapper {
   background: #fff;
   padding-top: 7rem;
   box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.1);
 }
-.il_logos .container .il_block_intro, .il_logos .container .intro_title, .il_logos .container .il_logos_inner {
+.il_logos .container .il_block_intro, .il_logos .il-countdown-wrapper .il_block_intro, .il_logos .container .intro_title, .il_logos .il-countdown-wrapper .intro_title, .il_logos .container .il_logos_inner, .il_logos .il-countdown-wrapper .il_logos_inner {
   padding: 0 7rem;
 }
 @media (max-width: 1199.5px) {
-  .il_logos .container .btn_column {
+  .il_logos .container .btn_column, .il_logos .il-countdown-wrapper .btn_column {
     width: -moz-fit-content;
     width: fit-content;
   }
 }
 @media (min-width: 1199.6px) {
-  .il_logos .container {
+  .il_logos .container, .il_logos .il-countdown-wrapper {
     display: flex;
     flex-wrap: wrap;
   }
 }
-.il_logos .container h3 {
+.il_logos .container h3, .il_logos .il-countdown-wrapper h3 {
   font-size: 4rem;
   margin-top: 6rem;
   margin-bottom: 0;
 }
-.il_logos .container p {
+.il_logos .container p, .il_logos .il-countdown-wrapper p {
   color: #000;
 }
-.il_logos .container:after {
+.il_logos .container:after, .il_logos .il-countdown-wrapper:after {
   content: "";
   display: block;
   width: 100%;
@@ -1820,6 +1823,17 @@ div.margin-xl {
   }
 }
 
+.il_agenda {
+  margin-top: 5rem;
+  margin-bottom: -4rem;
+  z-index: 3;
+}
+.il_agenda .container, .il_agenda .il-countdown-wrapper {
+  background: #fff;
+}
+.il_agenda .container .intro_title, .il_agenda .il-countdown-wrapper .intro_title {
+  margin-bottom: 4rem;
+}
 .il_agenda .il_agenda_wrap {
   border: 1px solid #dedede;
   padding: 10px;
@@ -1857,9 +1871,9 @@ div.margin-xl {
   padding: 3rem 0;
 }
 .il_agenda .il_tabs_content * {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
-@media (max-width: 479.5px) {
+@media (max-width: 1199.5px) {
   .il_agenda .il_tabs_content * {
     font-size: 16px;
   }
@@ -1885,6 +1899,12 @@ div.margin-xl {
   overflow: hidden;
   display: flex;
 }
+.il_agenda .il_agenda_content ul, .il_agenda .il_agenda_content ol {
+  margin: 0;
+}
+.il_agenda .il_agenda_content p {
+  line-height: 4.55rem;
+}
 @media (max-width: 479.5px) {
   .il_agenda .il_agenda_content {
     flex-direction: column;
@@ -1897,7 +1917,7 @@ div.margin-xl {
   padding: 2rem 4rem;
 }
 .il_agenda .il_agenda_content .il_ac_time {
-  width: 20rem;
+  min-width: 20rem;
   font-size: 3rem;
   color: var(--color-1);
   font-weight: 700;
@@ -1970,6 +1990,11 @@ div.margin-xl {
 }
 .layout-1.organizers {
   position: relative;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+.layout-1.organizers .container, .layout-1.organizers .il-countdown-wrapper {
+  padding-top: 2rem;
 }
 .layout-1.organizers .intro_title {
   position: relative;
@@ -1982,15 +2007,18 @@ div.margin-xl {
   position: absolute;
   top: -20px;
 }
-.layout-1.organizers::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  width: 50%;
-  height: 49rem;
-  background-color: #F5F5F5;
+@media (min-width: 479.6px) {
+  .layout-1.organizers .il_block_bg img {
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    right: 0;
+  }
+}
+@media (max-width: 479.5px) {
+  .layout-1.organizers .il_block_bg img {
+    display: none;
+  }
 }
 
 .layout-2 .il_block_team_inner {

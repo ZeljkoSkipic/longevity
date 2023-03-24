@@ -42,6 +42,11 @@
   }
   &.organizers {
     position: relative;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    .container {
+      padding-top: 2rem;
+    }
     .intro_title  {
       position: relative;
       &::before {
@@ -53,15 +58,20 @@
         top: -20px;
       }
     }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      width: 50%;
-      height: 49rem;
-      background-color: #F5F5F5;
+    .il_block_bg {
+      @include tab-min {
+        img {
+          width: auto;
+          max-width: 50%;
+          height: auto;
+          right: 0;
+        }
+      }
+      @include mob-only {
+        img {
+          display: none;
+        }
+      }
     }
   }
 }
