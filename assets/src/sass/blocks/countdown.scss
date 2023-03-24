@@ -10,6 +10,9 @@
     }
 
     &-wrapper{
+        margin-top: -5.5rem;
+        z-index: 3;
+        position: relative;
         @extend .container;
         background: url( ../../../assets/icons/when.png), linear-gradient(90deg, #EB3C85 -12.9%, #8758EA 7.46%, #0BCBD7 61.77%, #4785F3 102.5%);
         background-position: left top, center center;

@@ -1,4 +1,13 @@
 .il_agenda {
+    margin-top: 5rem;
+    margin-bottom: -4rem;
+    z-index: 3;
+    .container {
+        .intro_title {
+            margin-bottom: 4rem;
+        }
+        background: #fff;
+    }
     .il_agenda_wrap {
         border: 1px solid #dedede;
         padding: 10px;
@@ -37,8 +46,8 @@
     .il_tabs_content {
         padding: 3rem 0;
         * {
-            font-size: 22px;
-            @include mob-only {
+            font-size: 2.2rem;
+            @include limbo-max {
                 font-size: 16px;
             }
         }
@@ -62,6 +71,12 @@
         margin-top: -1px;
         overflow: hidden;
         display: flex;
+        ul, ol {
+            margin: 0;
+        }
+        p {
+            line-height: 4.55rem;
+        }
         @include mob-only {
             flex-direction: column;
         }
@@ -72,7 +87,7 @@
             padding: 2rem 4rem;
         }
         .il_ac_time {
-            width: 20rem;
+            min-width: 20rem;
             font-size: 3rem;
             color: var(--color-1);
             font-weight: 700;
