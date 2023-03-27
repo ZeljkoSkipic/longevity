@@ -145,10 +145,39 @@
     margin-bottom: 6rem;
     .member_image {
       margin-bottom: 1rem;
+      position: relative;
       @include tab-min {
         img {
           aspect-ratio: 1 / 1.1;
         }
+      }
+      &:before {
+        content: "";
+        background: rgba(33, 33, 33, 0.48);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(100% - 0.8rem);
+        transition: var(--theme-transition);
+        opacity: 0;
+      }
+      &:hover:before {
+        opacity: 1;
+      }
+      &:after {
+        content: url('/wp-content/uploads/2023/03/Union.png');
+        color: white;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        height: 100%;
+        width: 100%;
+        transition: all 0.8s;
+        opacity: 0;
+      }
+      &:hover:after {
+        opacity: 1;
       }
     }
     .member_name {

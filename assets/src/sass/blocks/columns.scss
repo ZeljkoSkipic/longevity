@@ -127,6 +127,9 @@
           color: var(--color-2);
         }
       }
+      .il_col_text {
+        text-align: left;
+      }
     }
     &:after {
       content: '';
