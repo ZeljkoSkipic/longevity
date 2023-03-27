@@ -1,6 +1,6 @@
 <?php
 
-/* Load the JS for the blocks we use on the page */ 
+/* Load the JS for the blocks we use on the page */
 
 add_action('wp_enqueue_scripts', 'load_blocks_scripts');
 
@@ -17,10 +17,10 @@ function load_blocks_scripts () {
                     foreach($blocks as $block) {
                         $block_name = $block['blockName'];
                         $block_type_name = explode('/',  $block_name);
-                        $block_type = $block_type_name[0];
-                        $block_slug = $block_type_name[1];
+                        $block_type = isset($block_type_name[0]) ? $block_type_name[0] : "";
+                        $block_slug = isset($block_type_name[1]) ? $block_type_name[1] : "";
 
-                        if($block_type === 'acf') {
+                        if($block_type &&  $block_slug && $block_type === 'acf') {
                             $blocks_slugs_unique [$block_slug] = $block_slug;
                         }
                     }
