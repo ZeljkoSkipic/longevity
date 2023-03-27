@@ -869,7 +869,7 @@ figure img {
     color: var(--color-1);
     font-family: "Font Secondary";
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
   }
   .header-version-1 .header-main-inner .logo-wrap {
     flex: 15% 0 0;
@@ -3039,6 +3039,9 @@ textarea {
 .il_columns.custom-hp-columns-bottom .il_col.column h3 span {
   color: var(--color-2);
 }
+.il_columns.custom-hp-columns-bottom .il_col.column .il_col_text {
+  text-align: left;
+}
 .il_columns.custom-hp-columns-bottom:after {
   content: "";
   display: block;
@@ -3788,6 +3791,12 @@ textarea {
 .il_hero .il_hero_inner div.buttons {
   margin-top: 0;
 }
+@media (max-width: 479.5px) {
+  .il_hero .il_hero_inner div.buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .il_hero .il_hero_inner div p {
   font-size: 2.4rem;
 }
@@ -3850,6 +3859,11 @@ textarea {
 .il_hero .il_btn:nth-child(2) {
   color: var(--color-2);
   border-color: var(--color-2);
+}
+@media (min-width: 479.6px) {
+  .il_hero .il_btn:nth-child(2) {
+    margin-left: 2rem;
+  }
 }
 .il_hero.full-screen {
   min-height: calc(100vh - 16.5rem);
@@ -4324,8 +4338,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 20%;
   height: 20rem;
 }
 @media (max-width: 1199.5px) {
@@ -4568,6 +4581,7 @@ textarea {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 .il_agenda .il_tabs_nav li {
   display: inline-block;
@@ -4581,11 +4595,13 @@ textarea {
   font-size: 3.6rem;
   color: #fff;
   text-decoration: none;
-  color: #dedede;
+  color: var(--color-2);
   font-family: "Font Primary";
 }
 .il_agenda .il_tabs_nav li.active a {
-  color: var(--color-2);
+  color: rgba(0, 196, 204, 0.5);
+  background: white;
+  margin: 7px;
 }
 .il_agenda .il_tab {
   transition: var(--theme-transition);
@@ -4625,8 +4641,17 @@ textarea {
 .il_agenda .il_agenda_content ul, .il_agenda .il_agenda_content ol {
   margin: 0;
 }
+.il_agenda .il_agenda_content ul li::marker, .il_agenda .il_agenda_content ol li::marker {
+  content: "";
+}
 .il_agenda .il_agenda_content p {
   line-height: 4.55rem;
+}
+@media (max-width: 479.5px) {
+  .il_agenda .il_agenda_content p {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
 }
 @media (max-width: 479.5px) {
   .il_agenda .il_agenda_content {
@@ -4819,11 +4844,40 @@ textarea {
 }
 .il_team_row .il_team_member .member_image {
   margin-bottom: 1rem;
+  position: relative;
 }
 @media (min-width: 479.6px) {
   .il_team_row .il_team_member .member_image img {
     aspect-ratio: 1/1.1;
   }
+}
+.il_team_row .il_team_member .member_image:before {
+  content: "";
+  background: rgba(33, 33, 33, 0.48);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100% - 0.8rem);
+  transition: var(--theme-transition);
+  opacity: 0;
+}
+.il_team_row .il_team_member .member_image:hover:before {
+  opacity: 1;
+}
+.il_team_row .il_team_member .member_image:after {
+  content: url("/wp-content/uploads/2023/03/Union.png");
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  opacity: 0;
+}
+.il_team_row .il_team_member .member_image:hover:after {
+  opacity: 1;
 }
 .il_team_row .il_team_member .member_name {
   color: var(--text-color);

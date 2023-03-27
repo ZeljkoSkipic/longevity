@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            align-items: center;
         }
         li {
             display: inline-block;
@@ -30,12 +31,14 @@
                 font-size: 3.6rem;
                 color: #fff;
                 text-decoration: none;
-                color: #dedede;
+                color: var(--color-2);
                 font-family: "Font Primary";
             }
             &.active {
                 a {
-                    color: var(--color-2);
+                    color: rgba(0, 196, 204, 0.5);
+                    background: white;
+                    margin: 7px;
                 }
             }
         }
@@ -73,9 +76,18 @@
         display: flex;
         ul, ol {
             margin: 0;
+            li {
+                &::marker {
+                    content: '';
+                }
+            }
         }
         p {
             line-height: 4.55rem;
+            @include mob-only {
+                margin-top: 2.5rem;
+                margin-bottom: 2.5rem;
+            }
         }
         @include mob-only {
             flex-direction: column;
