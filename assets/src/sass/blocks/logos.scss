@@ -83,7 +83,7 @@
             }
             height: 20rem;
             @include tab-max {
-                height: 150px;
+                height: 115px;
             }
         }
 
@@ -93,9 +93,15 @@
             display: block;
             margin: 1rem 1rem 1rem 0;
             padding: 0 3rem 0 0;
+            @include tab-max {
+                padding: 0 2rem;
+            }
             img {
                 max-width: 100%;
                 object-fit: contain;
+                @include tab-max {
+                    max-height: 80px;
+                }
             }
         }
     }
