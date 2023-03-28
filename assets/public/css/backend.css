@@ -564,6 +564,11 @@ div.margin-xl {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 1659.6px) {
+  .il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links {
+    width: 270px;
+  }
+}
 .il-countdown-links ul li.il-countdown-add-to-calendar .add-to-calendar-wrapper .add-to-calendar-links a {
   color: #000;
   margin-bottom: 0.5rem;
