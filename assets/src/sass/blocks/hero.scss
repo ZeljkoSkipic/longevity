@@ -63,6 +63,9 @@
     border-radius: 2.5rem;
     border: 2px solid #fff;
     background: #fff;
+    @include mob-only {
+      padding: 1rem 3rem;
+    }
     &:first-child {
       color: var(--color-3);
       border-color: var(--color-3);
