@@ -166,6 +166,9 @@
                             position: absolute;
                             top:-3.125rem;
                             width: 210px;
+                            @include lg-desk-min {
+                                width: 270px;
+                            }
                             padding: 2.5rem 2rem;
                             background: #fff;
                             z-index: 99;
