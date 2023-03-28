@@ -38,7 +38,7 @@
         h3 {
             font-size: 4rem;
             margin-top: 6rem;
-            margin-bottom: 0;
+            margin-bottom: 4rem;
         }
         p {
             color: #000;
@@ -83,7 +83,7 @@
             }
             height: 20rem;
             @include tab-max {
-                height: 115px;
+                height: 95px;
             }
         }
 
