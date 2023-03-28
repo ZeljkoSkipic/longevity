@@ -3040,7 +3040,12 @@ textarea {
   color: var(--color-2);
 }
 .il_columns.custom-hp-columns-bottom .il_col.column .il_col_text {
-  text-align: left;
+  color: #000;
+}
+@media (max-width: 479.5px) {
+  .il_columns.custom-hp-columns-bottom .il_col.column .il_col_text {
+    text-align: left;
+  }
 }
 .il_columns.custom-hp-columns-bottom:after {
   content: "";
@@ -4321,6 +4326,10 @@ textarea {
 .il_logos .container p, .il_logos .il-countdown-wrapper p {
   color: #000;
 }
+.il_logos .container a, .il_logos .il-countdown-wrapper a {
+  color: #000;
+  text-decoration: none;
+}
 .il_logos .container:after, .il_logos .il-countdown-wrapper:after {
   content: "";
   display: block;
@@ -4621,8 +4630,6 @@ textarea {
   margin: 0;
 }
 .il_agenda .il_tabs_content strong {
-  margin-top: 18px;
-  margin-bottom: 18px;
   display: inline-block;
   font-size: 26px;
   color: var(--color-1);

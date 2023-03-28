@@ -128,7 +128,10 @@
         }
       }
       .il_col_text {
-        text-align: left;
+        color: #000;
+        @include mob-only {
+          text-align: left;
+        }
       }
     }
     &:after {
