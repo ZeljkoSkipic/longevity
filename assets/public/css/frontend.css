@@ -4648,8 +4648,24 @@ textarea {
 .il_agenda .il_agenda_content ul, .il_agenda .il_agenda_content ol {
   margin: 0;
 }
+.il_agenda .il_agenda_content ul li, .il_agenda .il_agenda_content ol li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .il_agenda .il_agenda_content ul li::marker, .il_agenda .il_agenda_content ol li::marker {
   content: "";
+}
+@media (max-width: 479.5px) {
+  .il_agenda .il_agenda_content ul li, .il_agenda .il_agenda_content ol li {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+.il_agenda .il_agenda_content ul li:first-child, .il_agenda .il_agenda_content ol li:first-child {
+  margin-top: 0;
+}
+.il_agenda .il_agenda_content ul li:last-child, .il_agenda .il_agenda_content ol li:last-child {
+  margin-bottom: 0;
 }
 .il_agenda .il_agenda_content p {
   line-height: 4.55rem;
