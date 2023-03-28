@@ -1622,7 +1622,7 @@ div.margin-xl {
 .il_logos .container h3, .il_logos .il-countdown-wrapper h3 {
   font-size: 4rem;
   margin-top: 6rem;
-  margin-bottom: 0;
+  margin-bottom: 4rem;
 }
 .il_logos .container p, .il_logos .il-countdown-wrapper p {
   color: #000;
@@ -1672,7 +1672,7 @@ div.margin-xl {
 }
 @media (max-width: 797.5px) {
   .il_logos .il_logos_inner .column {
-    height: 115px;
+    height: 95px;
   }
 }
 .il_logos .il_logos_inner .il_logo {
