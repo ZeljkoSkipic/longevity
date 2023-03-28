@@ -43,6 +43,10 @@
         p {
             color: #000;
         }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
         &:after {
             content: '';
             display: block;
