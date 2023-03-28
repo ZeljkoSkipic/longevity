@@ -16,6 +16,14 @@ jQuery(document).ready(function ($) {
 	});
 
 
+    $( "#primary-menu li" ).click(function() {
+        var windowsize = $(window).width();
+        if (windowsize < 1200) {
+            $("#primary-menu").fadeToggle();
+            $(".menu-toggle").toggleClass('menu-open')
+        }
+    })
+
 
     // Technologies
 /*
