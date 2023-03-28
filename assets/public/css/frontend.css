@@ -764,6 +764,24 @@ figure img {
   stroke: var(--color-1);
 }
 
+@media (max-width: 1199.5px) {
+  #primary-menu .nav-register-link {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #primary-menu .nav-register-link a {
+    font-family: "Font Secondary";
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--color-2);
+    border-radius: 2rem;
+    color: var(--color-2);
+    opacity: 1;
+    padding: 1.5rem 3rem;
+    margin-top: 1.5rem;
+  }
+}
 @media (min-width: 1199.6px) {
   .menu-toggle {
     display: none;
@@ -3864,6 +3882,11 @@ textarea {
   border-radius: 2.5rem;
   border: 2px solid #fff;
   background: #fff;
+}
+@media (max-width: 479.5px) {
+  .il_hero .il_btn {
+    padding: 1rem 3rem;
+  }
 }
 .il_hero .il_btn:first-child {
   color: var(--color-3);

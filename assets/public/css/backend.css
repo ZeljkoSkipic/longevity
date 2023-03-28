@@ -1163,6 +1163,11 @@ div.margin-xl {
   border: 2px solid #fff;
   background: #fff;
 }
+@media (max-width: 479.5px) {
+  .il_hero .il_btn {
+    padding: 1rem 3rem;
+  }
+}
 .il_hero .il_btn:first-child {
   color: var(--color-3);
   border-color: var(--color-3);
