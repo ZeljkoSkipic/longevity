@@ -122,6 +122,9 @@
                 font-size: 17px;
               }
           }
+          &.nav-register-link {
+            display: none;
+          }
           }
           > li:hover {
             .sub-menu-trigger{

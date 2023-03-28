@@ -856,6 +856,9 @@ figure img {
   .header-version-1 .header-main-inner #primary-menu > li .sub-menu-trigger > .sub-menu {
     font-size: 17px;
   }
+  .header-version-1 .header-main-inner #primary-menu > li.nav-register-link {
+    display: none;
+  }
   .header-version-1 .header-main-inner #primary-menu > li:hover .sub-menu-trigger {
     transform: rotate(90deg);
     top: 1px;
