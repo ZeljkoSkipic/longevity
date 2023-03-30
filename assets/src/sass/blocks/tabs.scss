@@ -66,6 +66,9 @@
             }
 
         }
+        .il_tab:not(:first-child) {
+            display: none;
+        }
     }
     .il_agenda_content {
         background: #FFF;
@@ -101,9 +104,6 @@
         }
         @include mob-only {
             flex-direction: column;
-        }
-        .il_tab:not(:first-child) {
-            display: none;
         }
         > div {
             padding: 2rem 4rem;

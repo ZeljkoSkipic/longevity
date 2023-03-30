@@ -4680,6 +4680,9 @@ textarea {
     font-size: 18px;
   }
 }
+.il_agenda .il_tabs_content .il_tab:not(:first-child) {
+  display: none;
+}
 .il_agenda .il_agenda_content {
   background: #FFF;
   margin-top: -1px;
@@ -4721,9 +4724,6 @@ textarea {
   .il_agenda .il_agenda_content {
     flex-direction: column;
   }
-}
-.il_agenda .il_agenda_content .il_tab:not(:first-child) {
-  display: none;
 }
 .il_agenda .il_agenda_content > div {
   padding: 2rem 4rem;
