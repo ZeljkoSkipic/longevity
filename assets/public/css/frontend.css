@@ -635,7 +635,7 @@ figure img {
   }
   .logo-wrap {
     line-height: 0;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
   .logo-wrap a {
     height: 100%;
@@ -664,7 +664,7 @@ figure img {
     padding: 1.5rem;
     color: var(--color-text);
     opacity: 0.65;
-    font-size: 15px;
+    font-size: 16px;
     width: 100%;
   }
   #primary-menu li.current-menu-item a {
@@ -779,7 +779,7 @@ figure img {
     color: var(--color-2);
     opacity: 1;
     padding: 1.5rem 3rem;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
   }
 }
 @media (min-width: 1199.6px) {
